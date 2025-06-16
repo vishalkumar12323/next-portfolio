@@ -29,7 +29,7 @@ export default function Navbar() {
   const closeMenu = () => setIsOpen(false);
 
   return (
-    <nav className="sticky top-0 w-full z-50 backdrop-blur-md bg-background/40 border-b shadow-sm transition-all duration-300">
+    <nav className="sticky top-0 w-full z-50 backdrop-blur-lg bg-background border-b shadow-sm transition-all duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Brand / Logo (optional) */}
@@ -42,7 +42,7 @@ export default function Navbar() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className={`text-sm font-medium px-3 py-2 rounded-md transition-colors ${
+                  className={`text-sm font-medium px-3 py-2 rounded-md transition-colors  ${
                     pathname === item.href
                       ? "bg-primary text-white dark:text-black"
                       : "text-muted-foreground hover:text-primary"
