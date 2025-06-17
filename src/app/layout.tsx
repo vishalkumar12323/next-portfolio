@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Lato } from "next/font/google";
+import { Lato, Geist } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/context/theme-provider";
 import Navbar from "@/components/main/Navbar";
@@ -7,6 +7,12 @@ import Navbar from "@/components/main/Navbar";
 const lato = Lato({
   weight: "400",
   variable: "--lato",
+  subsets: ["latin"],
+});
+
+const geist = Geist({
+  weight: "500",
+  variable: "--geist",
   subsets: ["latin"],
 });
 
@@ -26,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${lato.variable} ${lato.className} antialiased text-black dark:text-white flex flex-col min-h-screen`}
+        className={`${geist.variable} ${geist.className} antialiased text-black dark:text-white flex flex-col min-h-screen`}
       >
         <ThemeProvider
           attribute="class"

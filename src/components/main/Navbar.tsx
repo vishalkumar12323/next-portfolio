@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { Menu, X, Moon, Sun } from "lucide-react";
+import { Menu, X, Moon, Sun, ArrowRightFromLine } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useTheme } from "next-themes";
 
@@ -27,16 +27,11 @@ export default function Navbar() {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   const closeMenu = () => setIsOpen(false);
-
   return (
     <nav className="sticky top-0 w-full z-50 backdrop-blur-lg bg-background border-b shadow-sm transition-all duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* Brand / Logo (optional) */}
-          <div className="text-xl font-semibold">MySite</div>
-
-          {/* Desktop Nav */}
-          <div className="flex gap-4">
+        <div className="flex justify-start items-center h-16">
+          <div className="flex justify-between w-full gap-4">
             <div className="hidden md:flex md:justify-end space-x-4">
               {navItems.map((item) => (
                 <Link
