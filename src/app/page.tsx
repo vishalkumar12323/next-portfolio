@@ -69,7 +69,7 @@ export default function HeroSectionPage() {
           </div>
           <Button
             variant={"outline"}
-            className="px-6 py-4 text-md rounded-sm overflow-hidden relative z-10 cursor-pointer"
+            className="px-6 py-4 text-md rounded-sm overflow-hidden relative z-10 cursor-pointer shadow-sm hover:drop-shadow-lg"
           >
             <span>Resume</span> <ArrowBigRight className="w-6" />
           </Button>

@@ -8,7 +8,6 @@ import { useTheme } from "next-themes";
 
 const navItems = [
   { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
   { name: "Projects", href: "/projects" },
   { name: "Experience/Skills", href: "/experience" },
   { name: "Contact", href: "/contact" },
@@ -31,7 +30,7 @@ export default function Navbar() {
     <nav className="sticky top-0 w-full z-50 backdrop-blur-lg bg-background border-b shadow-sm transition-all duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-start items-center h-16">
-          <div className="flex justify-between w-full gap-4">
+          <div className="flex md:justify-between justify-end w-full gap-4">
             <div className="hidden md:flex md:justify-end space-x-4">
               {navItems.map((item) => (
                 <Link
@@ -48,12 +47,10 @@ export default function Navbar() {
               ))}
             </div>
 
-            {/* Right controls (theme toggle + menu icon) */}
             <div className="flex items-center space-x-2">
               {mounted && (
                 <Button
-                  variant="outline"
-                  size="icon"
+                  variant="ghost"
                   onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
                   className="cursor-pointer"
                 >
