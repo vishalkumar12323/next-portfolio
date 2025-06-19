@@ -121,4 +121,18 @@
     background-color: #0062d1;
     color: var(--foreground);
   }
+
+  .project-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .project-heading::after {
+    content: "";
+    background-color: #c0c0c0;
+    width: 150px;
+    height: 3px;
+    position: absolute;
+    margin-bottom: 10px;
+  }
 }
