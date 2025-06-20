@@ -1,21 +1,14 @@
 import type { Metadata } from "next";
-import { Lato, Geist } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/context/theme-provider";
 import Navbar from "@/components/main/Navbar";
 
-const lato = Lato({
-  weight: "400",
-  variable: "--lato",
-  subsets: ["latin"],
-});
-
-const geist = Geist({
+const poppins = Poppins({
   weight: "500",
-  variable: "--geist",
+  variable: "--poppins",
   subsets: ["latin"],
 });
-
 export const metadata: Metadata = {
   title: "Vishal-Kumar",
   description: "Portfolio template build with next.js",
@@ -32,11 +25,11 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geist.variable} ${geist.className} antialiased text-black dark:text-white flex flex-col min-h-screen`}
+        className={`${poppins.variable} ${poppins.className} antialiased text-black dark:text-white flex flex-col min-h-screen`}
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="light"
           enableSystem
           disableTransitionOnChange
         >

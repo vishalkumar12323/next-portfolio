@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { Github, Linkedin, Twitter, ArrowBigRight } from "lucide-react";
+import { Github, Linkedin, Twitter, MoveRight } from "lucide-react";
 import dynamic from "next/dynamic";
 import { Skeleton } from "@/components/ui/skeleton";
 
@@ -21,12 +21,12 @@ export default function HeroSectionPage() {
           <p className="text-xl text-muted-foreground mb-2">Hello 👋</p>
           <h1
             className={
-              "text-3xl sm:text-5xl md:text-7xl font-extrabold px-0 py-4 bg-clip-text text-transparent dark:bg-gradient-to-b dark:from-white dark:to-neutral-400 bg-gradient-to-b from-black to-neutral-800"
+              "text-3xl sm:text-5xl md:text-6xl font-extrabold px-0 py-4 bg-clip-text text-transparent dark:bg-gradient-to-b dark:from-white dark:to-neutral-400 bg-gradient-to-b from-black to-neutral-800"
             }
           >
             I&apos;m Vishal Kumar
           </h1>
-          <p className="text-lg mb-6 text-center md:text-start bg-clip-text text-transparent dark:bg-gradient-to-b dark:from-white/80 dark:to-neutral-400 bg-gradient-to-b from-black to-neutral-800">
+          <p className="text-[15px] md:text-[17px] mb-6 text-center md:text-start bg-clip-text text-transparent dark:bg-gradient-to-b dark:from-white/80 dark:to-neutral-400 bg-gradient-to-b from-black to-neutral-800">
             Passionate and results-driven Full-Stack Web Developer with 2.5
             years of hands-on experience in building responsive front-end
             interfaces and scalable back-end APIs. Proficient in JavaScript,
@@ -71,7 +71,7 @@ export default function HeroSectionPage() {
             variant={"outline"}
             className="px-6 py-4 text-md rounded-sm overflow-hidden relative z-10 cursor-pointer shadow-sm hover:drop-shadow-lg"
           >
-            <span>Resume</span> <ArrowBigRight className="w-6" />
+            <span>Resume</span> <MoveRight className="w-6" />
           </Button>
         </div>
         <Profile />

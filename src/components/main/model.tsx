@@ -39,12 +39,12 @@ export default function Model({ children }: { children: React.ReactNode }) {
   return (
     <div
       ref={overlay}
-      className="fixed overflow-y-auto top-0 left-0 z-[999] p-10 w-full h-full bg-gray-300/60 darK:bg-black/70 backdrop-blur-md"
+      className="fixed top-0 left-0 z-[999] py-20 px-0 w-full h-full bg-gray-300/60  dark:bg-black/70 backdrop-blur-md overflow-auto"
       onClick={onClick}
     >
       <Card
         ref={wrapper}
-        className="p-0 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 max-w-2/3 w-full"
+        className="overflow-hidden relative m-auto p-0 border rounded-md max-w-11/12 md:max-w-2/3 animatepop"
       >
         {children}
       </Card>

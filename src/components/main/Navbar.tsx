@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { Menu, X, Moon, Sun, ArrowRightFromLine } from "lucide-react";
+import { Menu, X, Moon, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useTheme } from "next-themes";
 
@@ -52,7 +52,7 @@ export default function Navbar() {
                 <Button
                   variant="ghost"
                   onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                  className="cursor-pointer"
+                  className="cursor-pointer bg-accent"
                 >
                   {theme === "dark" ? (
                     <Sun className="w-4 h-4" />

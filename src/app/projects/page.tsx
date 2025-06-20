@@ -6,21 +6,33 @@ export default function ProjectPage() {
   return (
     <>
       <section>
-        <div className="project-heading after:[35%] leading-12 md:leading-10 md:after:left-[42%] after:top-12 after:bg-gray-700 dark:after:bg-gray-300 text-center mt-5 text-2xl md:text-4xl md:mt-8 font-bold relative bg-clip-text text-transparent dark:bg-gradient-to-b dark:from-white dark:to-neutral-400 bg-gradient-to-b from-black to-neutral-800">
-          SOME INSIDE PROJECTS, I'VE DONE
+        <div className="project-heading after:[35%]   md:after:left-[42%] after:top-12 after:bg-gray-700 after:mb-3 dark:after:bg-gray-300 text-center mt-5 mb-4 text-2xl md:text-4xl md:mt-8 font-bold relative bg-clip-text text-transparent dark:bg-gradient-to-b dark:from-white dark:to-neutral-400 bg-gradient-to-b from-black to-neutral-800">
+          <h2 className="leading-12 md:leading-10">
+            SOME INSIDE PROJECTS, I&apos;VE DONE
+          </h2>
         </div>
-        <div className="py-6 mt-6 grid grid-cols-1 place-items-center md:place-items-baseline gap-5 md:gap-10 md:grid-cols-2">
+
+        <div className="mt-6 mb-3 w-full">
+          <p className="text-center w-full leading-6 text-gray-800 dark:text-gray-300">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Consequuntur, assumenda, officia cupiditate itaque quos quam sint
+            dolore iste error ratione ab est, laboriosam delectus? Blanditiis
+            reprehenderit libero aliquam at asperiores.
+          </p>
+        </div>
+
+        <div className="py-6 mt-6 grid grid-cols-1 place-items-center md:place-items-baseline gap-y-10 md:gap-10 md:grid-cols-2">
           {projectData.map((p) => (
             <Link
               href={`/projects/${p.id}`}
               key={p.id}
-              className="hover:scale-105 rounded-md  drop-shadow-2xl dark:shadow-gray-800/80 transition-transform duration-500"
+              className="hover:scale-105 rounded-lg  drop-shadow-2xl dark:shadow-gray-800/80 transition-transform duration-500"
             >
               <Image
-                src={p.src}
+                src={p.src[0]}
                 alt={p.name}
                 width={600}
-                className="h-[300px] object-cover rounded-md"
+                className="h-[300px] object-cover rounded-lg"
               />
             </Link>
           ))}
