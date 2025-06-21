@@ -1,5 +1,13 @@
 import { Card } from "@/components/ui/card";
 import Link from "next/link";
+import {
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogDescription,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 const skills = [
   {
@@ -119,12 +127,19 @@ export default function ExperiencePage() {
 
 const Skill = ({ name }: { name: string }) => {
   return (
-    <Link
-      href={""}
-      className="inline-block w-[17rem] py-4 px-3 m-2 rounded-sm shadow-md border hover:shadow-lg dark:bg-accent"
-    >
-      {" "}
-      <span>{name}</span>{" "}
-    </Link>
+    <Dialog>
+      <span className="inline-block w-[17rem] py-4 px-3 m-2 shadow-md border hover:shadow-lg dark:bg-accent cursor-pointer">
+        <DialogTrigger className="cursor-pointer w-full h-full">
+          {name}
+        </DialogTrigger>
+        <DialogContent className="bg-accent rounded-sm">
+          <DialogTitle></DialogTitle>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque a
+          provident nostrum commodi cum! Esse quibusdam ipsam sapiente
+          repellendus consequatur fuga, voluptates id. Architecto, voluptate
+          porro. Cupiditate inventore nemo corporis.
+        </DialogContent>
+      </span>
+    </Dialog>
   );
 };
