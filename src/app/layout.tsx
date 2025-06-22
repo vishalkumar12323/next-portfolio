@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { Open_Sans } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/context/theme-provider";
 import Navbar from "@/components/main/Navbar";
 
-const poppins = Poppins({
-  weight: "500",
-  variable: "--poppins",
+const open_sans = Open_Sans({
+  weight: "400",
+  variable: "--lato",
   subsets: ["latin"],
 });
 export const metadata: Metadata = {
@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${poppins.variable} ${poppins.className} antialiased text-black dark:text-white flex flex-col min-h-screen`}
+        className={`${open_sans.variable} ${open_sans.className} antialiased text-black dark:text-white flex flex-col min-h-screen`}
       >
         <ThemeProvider
           attribute="class"
