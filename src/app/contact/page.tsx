@@ -13,7 +13,7 @@ export default function ContactPage() {
 
       <div className="mb-3 w-full">
         <p className="text-center w-full leading-6 text-gray-800 dark:text-gray-300">
-          Interested, send a message if you'd like to work with me.
+          Interested, send a message if you&apos;d like to work with me.
         </p>
       </div>
 
