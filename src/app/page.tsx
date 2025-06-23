@@ -48,7 +48,7 @@ export default function HeroSectionPage() {
                 LinkedIn
               </Button>
             </Link>
-            <Link href="https://twitter.com/YOUR_HANDLE" target="_blank">
+            <Link href="https://x.com/vishalkumar2654" target="_blank">
               <Button
                 variant="outline"
                 className="cursor-pointer shadow-sm hover:drop-shadow-lg"
